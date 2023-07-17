@@ -3,21 +3,65 @@
 //Expected Output : 34223
 
 // CODE HERE
+function reverse_a_number(n)
+{
+	n = n + "";
+	return n.split("").reverse().join("");
+}
+console.log(Number(reverse_a_number(32243)));
 
 //***************************************** */
 // Write a JavaScript function that checks whether a passed string is a palindrome or not?
 
 // CODE HERE
+// Write a JavaScript function that checks whether a passed string is palindrome or not? 
 
+function isPalindrome(string) {
+    const length = string.length;
+    for (let i = 0; i < length / 2; i++) {
+      if (string[i] !== string[length - 1 - i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+  const string1 = 'madam';
+  const string2 = 'nursesrun';
+  const string3 = 'fox';
+  console.log(isPalindrome(string1)); 
+  console.log(isPalindrome(string2)); 
+  console.log(isPalindrome(string3));
 //***************************************** */
 // Write a JavaScript function that generates all combinations of a string.
 
 // CODE HERE
-
+function substrings(string) {
+    const result = [];
+    
+    function search_combination(start, current) {
+      if (cur.length > 0) {
+        result.push(current);
+      }
+      for (let i = start; i < string.length; i++) {
+        search_combination(i + 1, current + string[i]);
+      }
+    }  
+    search_combination(0, '');
+    return result;
+  }
+  const string = 'big boy';
+  const result = substrings(string);
+  console.log(result);
+  
 //***************************************** */
 // Write a JavaScript function that returns a string that has letters in alphabetical order.
 
 // CODE HERE
+function alphabet_order(string)
+  {
+return string.split('').sort().join('');
+  }
+console.log(alphabet_order("webmaster"));
 
 //***************************************** */
 // Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case.
