@@ -70,9 +70,14 @@ console.log(alphabet_order("webmaster"))// logged to test function
 
 // CODE HERE
 function capitalFirst(string){
-    return string.split(' ').toUpperCase().join('')
+    let words = string.split(' ')
+    for(let i =0; i < words.length; i++){
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1)
+    }
+    return words.join(' ')
 }
-console.log(capitalFirst("the quick brown fox"))
+let sentence = "the quick brown fox"
+console.log(capitalFirst(sentence))
 //***************************************** */
 // Write a JavaScript function that accepts a string as a parameter and finds the longest word within the string.
 // Example string : 'Web Development Tutorial'
