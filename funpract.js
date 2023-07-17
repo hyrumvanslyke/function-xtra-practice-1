@@ -3,12 +3,12 @@
 //Expected Output : 34223
 
 // CODE HERE
-function reverse_a_number(n)
+function reverse_a_number(n) // creating the function and passing it the argument of 'n'
 {
-	n = n + "";
-	return n.split("").reverse().join("");
+	n = n + ""; // turning the n variable into a string
+	return n.split("").reverse().join(""); // this line breaks the code into each of its numbers then reverses it and puts it back together with .join.
 }
-console.log(Number(reverse_a_number(32243)));
+console.log(Number(reverse_a_number(32243))); // logged to test the code.
 
 //***************************************** */
 // Write a JavaScript function that checks whether a passed string is a palindrome or not?
@@ -16,18 +16,18 @@ console.log(Number(reverse_a_number(32243)));
 // CODE HERE
 // Write a JavaScript function that checks whether a passed string is palindrome or not? 
 
-function isPalindrome(string) {
-    const length = string.length;
-    for (let i = 0; i < length / 2; i++) {
-      if (string[i] !== string[length - 1 - i]) {
+function isPalindrome(string) { // creating the function and passing it the argument of 'string'
+    let length = string.length; // creating a variable to track the length of a string 
+    for (let i = 0; i < length / 2; i++) { // for loop to test if each opposite index is the same.
+      if (string[i] !== string[length - 1 - i]) {// if index of i === length - 1 + i it returns true else it returns false
         return false;
       }
     }
     return true;
   }
-  const string1 = 'madam';
-  const string2 = 'nursesrun';
-  const string3 = 'fox';
+  let string1 = 'madam'; // creating variable to test the code above
+  let string2 = 'nursesrun';
+  let string3 = 'fox';
   console.log(isPalindrome(string1)); 
   console.log(isPalindrome(string2)); 
   console.log(isPalindrome(string3));
