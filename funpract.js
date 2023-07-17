@@ -69,15 +69,15 @@ console.log(alphabet_order("webmaster"))// logged to test function
 // Expected Output : 'The Quick Brown Fox '
 
 // CODE HERE
-function capitalFirst(string){
-    let words = string.split(' ')
+function capitalFirst(string){// create a function called capitalFirst 
+    let words = string.split(' ')// splits the input string into an array of individual words using split method
     for(let i =0; i < words.length; i++){
-        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1)
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1)// uses charAt to get to first letter then uses toUpperCase to change it to upper case. slice is then used to get the rest of the word after the first letter and is added to first letter.
     }
-    return words.join(' ')
+    return words.join(' ')// capitalized words are joined back together into one string
 }
 let sentence = "the quick brown fox"
-console.log(capitalFirst(sentence))
+console.log(capitalFirst(sentence))// logged for testing
 //***************************************** */
 // Write a JavaScript function that accepts a string as a parameter and finds the longest word within the string.
 // Example string : 'Web Development Tutorial'
