@@ -35,33 +35,33 @@ function isPalindrome(string) { // creating the function and passing it the argu
 // Write a JavaScript function that generates all combinations of a string.
 
 // CODE HERE
-function substrings(string) {
-    const result = [];
+function substrings(string) { // created a function called substrings that takes a string argument
+    let result = [];// created a variable and set it equal to an empty string
     
-    function search_combination(start, current) {
-      if (cur.length > 0) {
-        result.push(current);
+    function search_combination(start, current) { // created a function call search_combination that takes two arguments, 'start' and 'current'
+      if (current.length > 0) {// if statement checking if the current length is greater than 0 
+        result.push(current);// if it is true it pushes the current into our result array.
       }
-      for (let i = start; i < string.length; i++) {
-        search_combination(i + 1, current + string[i]);
+      for (let i = start; i < string.length; i++) {// created a for loop that starts at our start variable and continues till i is greater than the length of our initial string
+        search_combination(i + 1, current + string[i]);// recursively calls the search_combination function with updated start and current parameters
       }
     }  
-    search_combination(0, '');
-    return result;
+    search_combination(0, ''); // runs our function using starting parameters 
+    return result; // returns our result variable
   }
-  const string = 'big boy';
-  const result = substrings(string);
+  let string = 'ella'; // test code and logs to see if it works
+  let result = substrings(string);
   console.log(result);
   
 //***************************************** */
 // Write a JavaScript function that returns a string that has letters in alphabetical order.
 
 // CODE HERE
-function alphabet_order(string)
+function alphabet_order(string) // created a function named alphabet_order taking in a string argument
   {
-return string.split('').sort().join('');
+return string.split('').sort().join(''); // in the function we split the string apart, call the sort funtion to sort it, then put it back together with join
   }
-console.log(alphabet_order("webmaster"));
+console.log(alphabet_order("webmaster"));// logged to test function
 
 //***************************************** */
 // Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case.
