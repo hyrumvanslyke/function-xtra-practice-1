@@ -5,10 +5,10 @@
 // CODE HERE
 function reverse_a_number(n) // creating the function and passing it the argument of 'n'
 {
-	n = n + ""; // turning the n variable into a string
-	return n.split("").reverse().join(""); // this line breaks the code into each of its numbers then reverses it and puts it back together with .join.
+	n = n + "" // turning the n variable into a string
+	return n.split("").reverse().join("") // this line breaks the code into each of its numbers then reverses it and puts it back together with .join.
 }
-console.log(Number(reverse_a_number(32243))); // logged to test the code.
+console.log(Number(reverse_a_number(32243))) // logged to test the code.
 
 //***************************************** */
 // Write a JavaScript function that checks whether a passed string is a palindrome or not?
@@ -17,41 +17,41 @@ console.log(Number(reverse_a_number(32243))); // logged to test the code.
 // Write a JavaScript function that checks whether a passed string is palindrome or not? 
 
 function isPalindrome(string) { // creating the function and passing it the argument of 'string'
-    let length = string.length; // creating a variable to track the length of a string 
+    let length = string.length // creating a variable to track the length of a string 
     for (let i = 0; i < length / 2; i++) { // for loop to test if each opposite index is the same.
       if (string[i] !== string[length - 1 - i]) {// if index of i === length - 1 + i it returns true else it returns false
-        return false;
+        return false
       }
     }
-    return true;
+    return true
   }
-  let string1 = 'madam'; // creating variable to test the code above
-  let string2 = 'nursesrun';
-  let string3 = 'fox';
-  console.log(isPalindrome(string1)); 
-  console.log(isPalindrome(string2)); 
-  console.log(isPalindrome(string3));
+  let string1 = 'madam' // creating variable to test the code above
+  let string2 = 'nursesrun'
+  let string3 = 'fox'
+  console.log(isPalindrome(string1))
+  console.log(isPalindrome(string2))
+  console.log(isPalindrome(string3))
 //***************************************** */
 // Write a JavaScript function that generates all combinations of a string.
 
 // CODE HERE
 function substrings(string) { // created a function called substrings that takes a string argument
-    let result = [];// created a variable and set it equal to an empty string
+    let result = []// created a variable and set it equal to an empty string
     
     function search_combination(start, current) { // created a function call search_combination that takes two arguments, 'start' and 'current'
       if (current.length > 0) {// if statement checking if the current length is greater than 0 
-        result.push(current);// if it is true it pushes the current into our result array.
+        result.push(current)// if it is true it pushes the current into our result array.
       }
       for (let i = start; i < string.length; i++) {// created a for loop that starts at our start variable and continues till i is greater than the length of our initial string
-        search_combination(i + 1, current + string[i]);// recursively calls the search_combination function with updated start and current parameters
+        search_combination(i + 1, current + string[i])// recursively calls the search_combination function with updated start and current parameters
       }
     }  
-    search_combination(0, ''); // runs our function using starting parameters 
+    search_combination(0, '') // runs our function using starting parameters 
     return result; // returns our result variable
   }
-  let string = 'ella'; // test code and logs to see if it works
-  let result = substrings(string);
-  console.log(result);
+  let string = 'ella' // test code and logs to see if it works
+  let result = substrings(string)
+  console.log(result)
   
 //***************************************** */
 // Write a JavaScript function that returns a string that has letters in alphabetical order.
@@ -59,9 +59,9 @@ function substrings(string) { // created a function called substrings that takes
 // CODE HERE
 function alphabet_order(string) // created a function named alphabet_order taking in a string argument
   {
-return string.split('').sort().join(''); // in the function we split the string apart, call the sort funtion to sort it, then put it back together with join
+return string.split('').sort().join('') // in the function we split the string apart, call the sort funtion to sort it, then put it back together with join
   }
-console.log(alphabet_order("webmaster"));// logged to test function
+console.log(alphabet_order("webmaster"))// logged to test function
 
 //***************************************** */
 // Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case.
@@ -69,7 +69,10 @@ console.log(alphabet_order("webmaster"));// logged to test function
 // Expected Output : 'The Quick Brown Fox '
 
 // CODE HERE
-
+function capitalFirst(string){
+    return string.split(' ').toUpperCase().join('')
+}
+console.log(capitalFirst("the quick brown fox"))
 //***************************************** */
 // Write a JavaScript function that accepts a string as a parameter and finds the longest word within the string.
 // Example string : 'Web Development Tutorial'
