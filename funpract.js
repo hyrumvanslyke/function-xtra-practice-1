@@ -84,7 +84,9 @@ console.log(capitalFirst(sentence))// logged for testing
 // Expected Output : 'Development'
 
 // CODE HERE
-
+// function bigWord(string){
+//     //am confused rn
+// }
 //***************************************** */
 // Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
 // Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.
@@ -92,7 +94,17 @@ console.log(capitalFirst(sentence))// logged for testing
 // Expected Output : 5
 
 // CODE HERE
-
+function vowels(string1){// create the function
+    let vowelList = 'aeiouAEIOU'// provide a list of valid vowels
+    let vcount =0 // create a count of the vowels
+    for(let i = 0; i < string1.length; i++){// for loop runs through the vowel list to see if the index i is at is a vowel
+        if(vowelList.indexOf(string1[i]) !== -1){
+            vcount += 1 // if it is it adds one to the count
+        }
+    }
+    return vcount // returns count
+}
+console.log(vowels("sometimes I walk to work, sometimes I skip there")) // logged to check
 //***************************************** */
 // Write a JavaScript function that accepts a number as a parameter and checks whether it is prime or not.
 // Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
