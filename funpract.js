@@ -110,18 +110,43 @@ console.log(vowels("sometimes I walk to work, sometimes I skip there")) // logge
 // Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 
 // CODE HERE
-
+function isPrime(n){// function to test if a number(n) is a prime number
+  if (n <= 1) { // if statement that checks if the number is 1 or less if so it is not prime
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(n); i++) {// for loop created to check to see if the number is divisible by anything other than itself if it is it returns false.
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;// else return true
+}
+console.log(isPrime(7))// logged for testing
 //***************************************** */
 // Write a JavaScript function that accepts an argument and returns the type.
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
 
 // CODE HERE
-
+function whatsTheType(n){// function to return type of a parameter
+  return typeof(n)// using typeof to find the type of a parameter
+}
+console.log(whatsTheType(56))//logged for testing
 //***************************************** */
 // Write a JavaScript function which returns the n rows by n columns identity matrix.
 
 // CODE HERE
-
+function matrix(n) {// creating identity matrix function
+for (i=0; i < n; i++){// for loop to loop through n to create the rows 
+    for (j=0; j < n; j++){// for loop to loop through and create the columns
+         if (i === j){// if the index of i and j match a 1 is placed in the matrix
+          console.log(' 1 ')
+         }else{// if the indexs do not match a 0 is placed in the matrix
+           console.log(' 0 ')}
+          }
+       console.log('----------')// console.log to break up columns of the matrix
+     }
+ }
+matrix(4);// logged for testing
 //***************************************** */
 // Write a JavaScript function that takes an array of numbers and finds the second lowest and second greatest numbers, respectively.
 // Sample array : [1,2,3,4,5]
@@ -151,7 +176,9 @@ console.log(vowels("sometimes I walk to work, sometimes I skip there")) // logge
 // Write a JavaScript function to get the number of occurrences of each letter in a specified string.
 
 // CODE HERE 
+function letterCount(x, l){
 
+}
 //***************************************** */
 // Write a function for searching JavaScript arrays with binary searches.
 // Note : A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
